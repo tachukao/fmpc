@@ -1,0 +1,31 @@
+(library
+ (name fmpc)
+ (public_name fmpc)
+ (libraries ctypes owl)
+ (foreign_stubs
+  (language c)
+  (names fmpc fmpc_stubs)
+  (flags
+   (:include c_flags.sexp)))
+ (c_library_flags
+  (:include c_library_flags.sexp)))
+
+(rule
+ (targets c_flags.sexp c_library_flags.sexp)
+ (deps
+  (:discover ../config/discover.exe))
+ (action
+  (run %{discover})))
+
+(rule
+ (targets fmpc_bindings.ml)
+ (deps ../bindings/fmpc_bindings.ml)
+ (action
+  (copy ../bindings/fmpc_bindings.ml fmpc_bindings.ml)))
+
+(rule
+ (targets fmpc_stubs.c fmpc_generated.ml)
+ (deps
+  (:fmpc_gen ../bindings/fmpc_gen.exe))
+ (action
+  (run %{fmpc_gen})))

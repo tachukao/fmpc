@@ -1,0 +1,3 @@
+(executable
+ (name fmpc_gen)
+ (libraries ctypes.stubs))

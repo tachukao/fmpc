@@ -1,0 +1,17 @@
+opam-version: "2.0"
+authors: [ "Ta-Chu Kao" ]
+license: "MIT"
+homepage: "https://github.com/tachukao/fmpc"
+dev-repo: "git+https://github.com/tachukao/fmpc.git"
+bug-reports: "https://github.com/tachukao/fmpc/issues"
+build: [
+  ["dune" "build" "-p" name "-j" jobs]
+]
+depends: [
+  "ocaml" {>= "4.06.0"}
+  "dune" {>= "2.0.0"}
+  "owl" {>= "0.7.0"}
+  "ctypes"
+]
+synopsis: "Fast MPC"
+description: "OCaml bindings to for fast_mpc"
