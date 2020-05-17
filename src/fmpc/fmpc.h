@@ -1,13 +1,13 @@
-/* ******************************************************************
+ /* ************************************************************
  * 
  * Fast MPC 
  * 
- * This code is adapted from the fast_mpc code written by Yang Wang 
- * and Stephen Boyd. The original code can be found at 
- * https://web.stanford.edu/~boyd/fast_mpc/
+ * This code is adapted from Yang Wang and Stephen Boyd's 
+ * implementation of fast_mpc. The original code can be found 
+ * at https://web.stanford.edu/~boyd/fast_mpc/
  * 
- * ******************************************************************/
-
+ * ***********************************************************/
+ 
 void printmat(double *A, int m, int n);
 
 void fmpc_step(double *A, double *B, double *Q, double *R, double *Qf,

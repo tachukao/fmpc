@@ -1,12 +1,12 @@
-/* ******************************************************************
+/* ************************************************************
  * 
  * Fast MPC 
  * 
- * This code is adapted from the fast_mpc code written by Yang Wang 
- * and Stephen Boyd. The original code can be found at 
- * https://web.stanford.edu/~boyd/fast_mpc/
+ * This code is adapted from Yang Wang and Stephen Boyd's 
+ * implementation of fast_mpc. The original code can be found 
+ * at https://web.stanford.edu/~boyd/fast_mpc/
  * 
- * ******************************************************************/
+ * ***********************************************************/
 
 #include <stdio.h>
 #include <stdlib.h>
